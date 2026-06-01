@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <title> Etiquetas semanticas </title>
+    <style> 
+        header {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+            color: Black;
+            background-color: #f1bfed;
+            text-align: center;
+        }
+        article {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            background-color: #f1bfed;
+        }
+        footer {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: smaller;
+            background-color: #f1bfed;
+            text-align: center;
+        }
+        .autor {
+            font-weight: bold;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <header> <span>LOGO - nombre de la empresa </span></header>
+    <nav>
+        <ul> 
+            <li> <a href="#"> Crear </a> </li>
+            <li> <a href="#"> Editar </a> </li>
+            <li> <a href="#"> Cerrar </a> </li>
+        </ul>
+    </nav>
+    <aside>
+        <ul>
+            <li> <a href="#"> Productos </a> </li>
+            <li> <a href="#"> Servicios </a> </li>
+        </ul>
+    </aside>
+    <main>
+        <section><h1>Aticulos</h1></section>
+        <article> 
+            <h2> Como instalar VSC</h2>
+            <p> Los pasos para instalar VSC son...</p>
+        </article>
+        <article>
+            <h2> Que es HTML</h2>
+            <p>HTML es un lenguaje de marcado de hipertexto...</p>
+        </article>
+        <article>
+                <h2>Qué es CSS</h2>
+                <p>Si deseamos modificar el aspecto visual de una página, usaremos CSS...</p>
+        </article>
+    </main>
+    <footer>Sitio desarrollado por <span class="autor">XXXXX</span></footer>
+</body>
+</html>

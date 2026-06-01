@@ -1,0 +1,61 @@
+
+body {
+    background-color: lightblue;
+    }
+h1 {
+    color: red;
+    }
+h2 {
+    color: red;
+    }
+.emojisaludo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    }
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+}
+aside {
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: justify;
+    margin-right: 20px;
+}
+
+/*Estilos para pantallas grandes*/
+
+@media(min-width: 992px){
+    
+    body {
+        background-color: lightyellow;
+    }
+
+    .contenedor {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+    }
+}
+/*Estilos para pantallas medianas*/
+@media(min-width: 576px) {
+    
+    body {
+        background-color: lightgreen;
+    }
+} 
+
+.boton{
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    padding: 10px 14px;
+}

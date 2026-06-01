@@ -1,0 +1,36 @@
+
+            a {
+                color: #303b27;
+                text-decoration: none;
+            }
+            .titulo-sitio {
+                color: #303b27;
+                font-family: "Trirong", serif;
+                text-align: right;
+                margin-right: 20px;
+            }
+            #mensaje-bienvenida {
+                color: #303b27;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background-color: rgb(153, 205, 240);
+                padding: 10px;
+            }
+            .menu-principal {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                padding: 10px 0;
+                gap: 70px;
+            }
+            .menu-principal a {
+                border: 1px solid black;
+                padding: 10px 20px;
+                text-decoration: none;
+                color: black;
+                border-radius: 8px;
+            }
+            .menu-principal a:hover {
+                background-color: lightblue;
+                color: white;
+            }
