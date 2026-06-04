@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Repaso</title>
+</head>
+<body>
+
+    <header class="text-center">
+        <h1>Verificador de edad</h1>
+    </header>
+
+    <section class="container mt-4">
+        <div class="card shadow">
+
+            <div class="card-header bg-primary text-white">
+                Informacion del participante
+            </div>
+
+            <div class="card-body">
+                <div class="mb-3">
+                     <label class="form-label fw-bold">
+                        Nombre:
+                    </label>
+                        <input  
+                        type="text"
+                        oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')"
+                        placeholder="Ingrese su nombre"
+                         id="nombre"       
+                        class="form-control">                
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">
+                        Edad:
+                    </label> 
+                    <input
+                        type="number"   
+                        min="0" max="120"
+                        step="1"   
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"  
+                        placeholder="Ingrese su edad"        
+                        id="edad"        
+                        class="form-control">
+                </div>
+
+                <button class="btn btn-primary mt-3" id="verificar" onclick="verificarEdad()">
+                    Verificar edad
+                </button>
+
+                <div class="alert alert-primary text-center mt-4">
+                    <h5 class="mb-2">Resultado</h5>
+                    <p id="resultado" class="mb-0 fs-4 fw-bold"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let botonVerificar = document.getElementById("verificar");
+        function verificarEdad() {
+            
+            let nombre = document.getElementById("nombre").value;
+            let edad = parseInt(document.getElementById("edad").value);
+
+            console.log("nombre:", nombre);
+            console.log("edad:", edad);
+
+            if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(nombre.trim())) {
+                document.getElementById("resultado").textContent =
+                "Ingrese un nombre válido.";
+                return;
+            }
+
+            if (!/^[0-9]+$/.test(edad.trim())) {
+                document.getElementById("resultado").textContent = "Por favor, ingrese una edad válida.";
+                return;
+            }
+
+            if (edad >= 18) {
+                document.getElementById("resultado").textContent = `¡Bienvenido, ${nombre}! Eres mayor de edad.`;
+            } else {
+                document.getElementById("resultado").textContent = `Lo siento, ${nombre}. No eres mayor de edad.`;
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio de profundización</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <header>
+        <div class="bg-primary text-white text-center py-4 shadow">
+            <h1 class="mb-0">Operaciones aritméticas</h1>
+        </div>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row min-vh-100">
+
+            <!-- Menú lateral -->
+            <aside class="col-md-3  text-dark p-0">
+
+                <div class="p-4 text-dark border-bottom">
+                    <h4 class="mb-0">Menú</h4>
+                </div>
+
+                <nav class="navbar navbar-dark">
+                    <div class="container-fluid">
+
+                        <ul class="navbar-nav w-100">
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark py-3 border-bottom">
+                                    Operaciones
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="index4.html" target="_blank" class="nav-link text-dark py-3 border-bottom">
+                                    Acerca de
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </nav>
+
+            </aside>
+
+            <!-- Contenido principal -->
+            <section class="col-md-9 p-4">
+
+                <div class="card shadow">
+
+                    <div class="card-header bg-primary text-white">
+                        Calculadora
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Número 1:
+                            </label>
+
+                            <input
+                                type="number"
+                                placeholder="Ingrese el primer número"
+                                id="numero1"
+                                class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Número 2:
+                            </label>
+
+                            <input
+                                type="number"
+                                placeholder="Ingrese el segundo número"
+                                id="numero2"
+                                class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">
+                                Operaciones:
+                            </label>
+
+                            <select id="operacion" class="form-select">
+                                <option value="0">Seleccione una opción</option>
+                                <option value="1">Sumar</option>
+                                <option value="2">Restar</option>
+                                <option value="3">Multiplicar</option>
+                                <option value="4">Dividir</option>
+                            </select>
+                        </div>
+
+                        <div class="alert alert-primary text-center mt-4">
+                            <h5 class="mb-2">Resultado</h5>
+                            <p id="resultado" class="mb-0 fs-4 fw-bold"></p>
+                        </div>
+
+                        <div class="text-end">
+                            <button
+                                class="btn btn-primary px-4"
+                                id="calcular"
+                                onclick="operacion();">
+                                Calcular
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="bg-dark text-light text-center py-3">
+            <p class="mb-0">
+                Desarrollado por Carolina Zuñiga
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function operacion() {
+            const numero1 = Number(document.getElementById("numero1").value);
+            const numero2 = Number(document.getElementById("numero2").value);
+
+            if (document.getElementById("operacion").value == "1"){
+                resultado = numero1 + numero2;
+            } else if (document.getElementById("operacion").value == "2") {
+                resultado = numero1 - numero2;
+            } else if (document.getElementById("operacion").value == "3") {
+                resultado = numero1 * numero2;
+            } else if (document.getElementById("operacion").value == "4") {
+                resultado = numero1 / numero2;
+            } else {
+                resultado = "";
+            }
+
+            document.getElementById("resultado").textContent = resultado;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
